@@ -13,13 +13,11 @@ const Home: React.FC = () => {
     >
       {/* Effet de boutons animés en arrière-plan */}
 
-      <FloatingLinks />
-
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center px-4 "
+        className="text-center px-4 z-10"
       >
         {/* Image optimisée avec Next.js */}
         <Image
@@ -27,7 +25,7 @@ const Home: React.FC = () => {
           width={500}
           height={300}
           alt="Lynkr Home"
-          className="z-10"
+          className="z-2"
         />
 
         <h1 className="text-4xl font-bold mb-4">
@@ -40,11 +38,12 @@ const Home: React.FC = () => {
         {/* Bouton avec effet de survol amélioré */}
         <Link
           href="/editeur"
-          className="relative px-6 py-3 bg-white text-indigo-600 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition transform hover:scale-105"
+          className="relative px-6 py-3 bg-white text-indigo-600 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition transform hover:scale-105 text-xl"
         >
           Commencer
         </Link>
       </motion.div>
+      <FloatingLinks />
     </div>
   );
 };

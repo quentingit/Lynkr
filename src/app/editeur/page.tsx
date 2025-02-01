@@ -6,8 +6,8 @@ import defaultData from "@/data/defaultData.json"; // 🔥 Import du JSON
 
 // Définition du type des données
 type Link = {
-  id?: string;
-  name?: string;
+  id: string;
+  name: string; // Assurez-vous que ce n'est pas optionnel
   title?: string;
   url: string;
   defaultUrl?: string;
@@ -18,8 +18,8 @@ type EditorData = {
   template: string;
   color: string;
   font: string;
-  socialLinks: Link[];
-  customLinks: Link[];
+  socialLinks: Link[]; // Assurez-vous que cela correspond bien
+  customLinks: { title: string; url: string }[];
 };
 
 export default function Editeur() {
@@ -137,37 +137,6 @@ export default function Editeur() {
       customLinks: prev.customLinks.filter((_, i) => i !== index),
     }));
   };
-
-  // Ajout et suppression des réseaux sociaux
-  const toggleSocialLink = (social: Link) => {
-    setData((prev) => {
-      const exists = prev.socialLinks.find((link) => link.id === social.id);
-      return {
-        ...prev,
-        socialLinks: exists
-          ? prev.socialLinks.filter((link) => link.id !== social.id)
-          : [...prev.socialLinks, social],
-      };
-    });
-  };
-
-  // Classe CSS pour la couleur choisie (pour les boutons dans la preview)
-  const bgColorClass =
-    data.color === "red"
-      ? "bg-red-600"
-      : data.color === "green"
-      ? "bg-green-600"
-      : data.color === "purple"
-      ? "bg-purple-600"
-      : "bg-indigo-600";
-
-  // Classe pour la police du titre
-  const fontClass =
-    data.font === "sans"
-      ? "font-sans"
-      : data.font === "serif"
-      ? "font-serif"
-      : "font-mono";
 
   return (
     <div
@@ -354,7 +323,6 @@ export default function Editeur() {
                         className="flex justify-between items-center border-b py-2"
                       >
                         <div className="flex items-center space-x-2">
-                          {link.icon}
                           <p className="font-semibold">{link.name}</p>
                         </div>
                         <div className="flex items-center space-x-2">

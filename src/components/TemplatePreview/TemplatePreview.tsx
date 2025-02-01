@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from "react";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 interface TemplatePreviewProps {
@@ -49,9 +49,10 @@ const TemplatePreview: React.FC<TemplatePreviewProps> = ({ data }) => {
   };
 
   // Gestion des classes Tailwind pour la couleur de fond des boutons
-  const buttonStyle = {
-    backgroundColor: data.color,
-  };
+  // const buttonStyle = {
+  //   backgroundColor: data.color,
+  // };
+
   return (
     <div
       className="p-6 rounded-lg shadow-md w-full h-full max-w-md mx-auto"
