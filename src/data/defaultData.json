@@ -1,0 +1,50 @@
+{
+  "title": "Mon Linktree",
+  "template": "template1",
+  "color": "indigo",
+  "font": "sans",
+  "socialLinks": [
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "url": "https://www.facebook.com"
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "url": "https://www.instagram.com"
+    },
+    {
+      "id": "twitter",
+      "name": "Twitter",
+      "url": "https://www.twitter.com"
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com"
+    }
+  ],
+  "customLinks": [
+    {
+      "title": "Portfolio",
+      "url": "https://www.monportfolio.com"
+    },
+    {
+      "title": "Mon Blog",
+      "url": "https://www.monblog.com"
+    },
+    {
+      "title": "YouTube",
+      "url": "https://www.youtube.com"
+    },
+    {
+      "title": "GitHub",
+      "url": "https://www.github.com"
+    },
+    {
+      "title": "Contact",
+      "url": "https://www.contact.com"
+    }
+  ]
+}
